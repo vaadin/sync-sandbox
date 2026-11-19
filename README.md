@@ -1,5 +1,7 @@
 # sync-sandbox
 
+
+A tiny greeter, nothing more.
 Disposable sandbox validating the security fix sync between a public repository and its private `-security-fixes` copy. The sync itself lives in `vaadin/PSIRT` under `sync/`. This repo plays the public product repository; `vaadin/sync-sandbox-security-fixes` plays the private copy.
 
 The validation scenarios and their results are recorded here as they run.
