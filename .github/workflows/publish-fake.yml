@@ -1,0 +1,12 @@
+name: Publish
+on:
+  push:
+    branches: [main]
+jobs:
+  publish:
+    # External effects stay in the public repository only, same pattern as
+    # vaadin/flow#26840. The security fix copies must never run this.
+    if: github.repository == 'vaadin/sync-sandbox'
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "publishing artifacts (pretend)"
