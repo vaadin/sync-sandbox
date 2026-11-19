@@ -13,6 +13,11 @@ class GreeterTest {
     }
 
     @Test
+    void rejectsMarkup() {
+        assertThrows(IllegalArgumentException.class, () -> new Greeter().greet("<b>x</b>"));
+    }
+
+    @Test
     void rejectsBlankName() {
         assertThrows(IllegalArgumentException.class, () -> new Greeter().greet(" "));
     }
