@@ -22,3 +22,4 @@ The validation scenarios and their results are recorded here as they run.
 - A freshly created repo can have event triggered workflows wedged: pushes and PRs produce no runs until Actions is toggled off and on (`gh api -X PUT repos/<r>/actions/permissions -F enabled=false` then `true`). Both sandbox repos needed it.
 - Resolving a sync conflict by hand ends in a force push that only the App can do: the private History protection ruleset has no human bypass. Either resolutions are pushed with an App token, or the ruleset gets a team as bypass actor. Decision pending.
 - A hand resolved rebase shipped conflict markers to public main (fixed in #6). Exactly the mistake the pending release gate with human confirmation of outgoing commits exists to catch.
+Moved after the build.
