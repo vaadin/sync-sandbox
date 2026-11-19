@@ -6,6 +6,6 @@ public class Greeter {
         if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("name is required");
         }
-        return "Hello, " + name;
+        return "Hello, " + name + "!";
     }
 }
