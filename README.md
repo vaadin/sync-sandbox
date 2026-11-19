@@ -14,3 +14,4 @@ The validation scenarios and their results are recorded here as they run.
 | d | Public merge conflicting with the pending fix | nothing pushed, PSIRT issue opened | pending |
 | e | Private-Only dependabot deletion | stays topmost, auto resolved | pending |
 | f | Publish workflow in the private copy | skipped by the repository guard | pending |
+Maintenance note.
