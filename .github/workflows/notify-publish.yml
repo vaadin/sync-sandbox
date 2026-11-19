@@ -1,0 +1,15 @@
+name: Notify publish
+on:
+  push:
+    branches: ['**']
+    tags: ['**']
+jobs:
+  notify:
+    if: github.actor == 'vaadin-security-publish[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Announce the publish push
+        run: |
+          echo "## Security publish push" >> "$GITHUB_STEP_SUMMARY"
+          echo "ref ${{ github.ref }} moved to ${{ github.sha }} by ${{ github.actor }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "TODO: post this to Slack once a webhook secret is available" >> "$GITHUB_STEP_SUMMARY"

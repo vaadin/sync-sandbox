@@ -1,6 +1,7 @@
 name: Verify
 on:
   workflow_dispatch:
+  merge_group:
   push:
     branches: ['**']
   pull_request:
